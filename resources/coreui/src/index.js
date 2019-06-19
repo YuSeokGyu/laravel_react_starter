@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { HashRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Loadable from 'react-loadable';
 import './App.scss';
 import ReactDOM from "react-dom";
@@ -15,11 +15,11 @@ const DefaultLayout = Loadable({
 class App extends Component {
     render () {
         return (
-            <HashRouter>
+            <BrowserRouter>
                 <Switch>
                     <Route path="/" name="Home" component={DefaultLayout} />
                 </Switch>
-            </HashRouter>
+            </BrowserRouter>
         )
     }
 }
